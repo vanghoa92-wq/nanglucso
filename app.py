@@ -191,7 +191,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <h1>📘 TRỢ LÝ SOẠN GIÁO ÁN TỰ ĐỘNG (NLS)</h1>
-    <p>Tác giả: Lù Seo Sần - Trường PTDTBT Tiểu học Bản Ngò - ĐT: 097 1986 343</p>
+    <p>Tác giả: Vàng Thị Hoa - Trường PTDTBT Tiểu học Cán Chu Phìn - ĐT: 0962215910</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -215,7 +215,7 @@ if os.path.exists(FILE_KHUNG_NANG_LUC):
     st.success(f"✅ Đã tự động tích hợp: {FILE_KHUNG_NANG_LUC}")
     has_framework = True
 else:
-    st.info(f"ℹ️ Chưa có file '{FILE_KHUNG_NANG_LUC}'. Thầy có thể upload để dùng tính năng Năng lực số.")
+    st.info(f"ℹ️ Chưa có file '{FILE_KHUNG_NANG_LUC}'. cô có thể upload để dùng tính năng Năng lực số.")
 
 uploaded_files = st.file_uploader(
     "Tải Ảnh/PDF bài dạy (Kéo thả vào đây):", 
@@ -251,7 +251,7 @@ if st.button("🚀 SOẠN GIÁO ÁN NGAY"):
             with st.spinner('AI đang soạn giáo án (Times New Roman 14pt, A4, Căn lề chuẩn)...'):
                 model = genai.GenerativeModel('gemini-2.5-flash-lite-preview-09-2025')
                 
-                # --- PROMPT CHI TIẾT CỦA THẦY (BẢN GỐC ĐẦY ĐỦ) ---
+                # --- PROMPT CHI TIẾT CỦA cô (BẢN GỐC ĐẦY ĐỦ) ---
                 prompt_instruction = f"""
                 Đóng vai là một Giáo viên Tiểu học giỏi, am hiểu chương trình GDPT 2018.
                 Nhiệm vụ: Soạn Kế hoạch bài dạy (Giáo án) cho bài: "{ten_bai}" - {lop}.
@@ -347,4 +347,4 @@ if st.button("🚀 SOẠN GIÁO ÁN NGAY"):
 
 # --- CHÂN TRANG ---
 st.markdown("---")
-st.markdown("<div style='text-align: center; color: #666;'>© 2025 - Lù Seo Sần - Trường PTDTBT Tiểu học Bản Ngò - ĐT: 097 1986 343</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #666;'>© 2025 - Vàng Thị Hoa - Trường PTDTBT Tiểu Cán Chu Phìn - ĐT: 097 1962215910</div>", unsafe_allow_html=True)
